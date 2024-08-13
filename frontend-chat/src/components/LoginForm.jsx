@@ -1,7 +1,7 @@
 import { useState, useContext } from 'react';
 import { AuthContext } from '../context/AuthContext';
 import { loginUser } from '../services/authService';
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 const LoginForm = () => {
     const [username, setUsername] = useState('');
@@ -44,6 +44,7 @@ const LoginForm = () => {
         <button 
         className='bg-indigo-500 p-2 px-6 text-white font-bold rounded-lg border border-transparent hover:bg-transparent hover:border-indigo-500 hover:text-indigo-500 transition-colors'
         type="submit">Login</button>
+        <Link to={'/register'}>Register</Link>
     </form>
     );
 };

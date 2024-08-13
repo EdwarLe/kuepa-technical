@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { registerUser } from '../services/AuthService';
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 const RegisterForm = () => {
     const [username, setUsername] = useState('');
@@ -58,6 +58,8 @@ const RegisterForm = () => {
             ? <p className='p-1 bg-green-400 w-full text-center text-white'>User registered successfully!</p>
             : <p className='p-1 bg-indigo-400 w-full text-center text-white'>Register and Enjoy the Chat!</p>
         }
+        <Link to={'/login'}>Login</Link>
+
     </form>
     );
 };
