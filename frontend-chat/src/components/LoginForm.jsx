@@ -22,8 +22,11 @@ const LoginForm = () => {
     };
 
     return (
-    <form onSubmit={handleSubmit}>
+    <form 
+    className='flex flex-col max-w-96 bg-neutral-100 w-full gap-3 p-3 shadow-xl rounded-xl justify-center items-center'
+    onSubmit={handleSubmit}>
         <input
+        className='p-3 border border-slate-200 rounded-lg w-full outline-indigo-500'
         type="text"
         placeholder="Username"
         value={username}
@@ -31,13 +34,16 @@ const LoginForm = () => {
         required
         />
         <input
+        className='p-3 border border-slate-200 rounded-lg w-full outline-indigo-500'
         type="password"
         placeholder="Password"
         value={password}
         onChange={(e) => setPassword(e.target.value)}
         required
         />
-        <button type="submit">Login</button>
+        <button 
+        className='bg-indigo-500 p-2 px-6 text-white font-bold rounded-lg border border-transparent hover:bg-transparent hover:border-indigo-500 hover:text-indigo-500 transition-colors'
+        type="submit">Login</button>
     </form>
     );
 };
